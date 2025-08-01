@@ -33,7 +33,7 @@ jobs:
 
     - name: Build
       run: |
-        ${{ matrix.c_compiler }} -v -Wall -Wextra -o see_defs main.c
+        ${{ matrix.c_compiler }} -v -std=gnu99 -Wall -Wextra -o see_defs main.c
 
     - name: Test
       run: ./see_defs
