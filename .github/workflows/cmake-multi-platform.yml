@@ -37,6 +37,7 @@ jobs:
     - name: Build
       run: |
         #${{ matrix.c_compiler }} -v -std=gnu99 -Wall -Wextra -o see_defs main.c
+        export CC=${{ matrix.c_compiler }}
         mkdir build
         cd build
         cmake ..
