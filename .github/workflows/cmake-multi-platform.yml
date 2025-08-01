@@ -18,15 +18,18 @@ jobs:
         build_type: [RelWithDebInfo]
         c_compiler: [gcc, clang]
         include:
-          - os: macos-latest
+          - os: macos-15
             c_compiler: clang
+          - os: macos-15
+            c_compiler: gcc-12
+          - os: macos-15
+            c_compiler: gcc-13
+          - os: macos-15
+            c_compiler: gcc-14
           - os: ubuntu-latest
             c_compiler: gcc
           - os: ubuntu-latest
             c_compiler: clang
-        exclude:
-          - os: macos-latest
-            c_compiler: gcc
 
     steps:
     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
