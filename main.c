@@ -15,7 +15,9 @@ int main(int argc, char *argv[]) {
 #endif
 
 #ifdef snprintf
-    printf("HAVE_SNPRINTF\n");
+    char m[10] = {0};
+    snprintf(m, sizeof(m), "hello");
+    printf("HAVE_SNPRINTF: %s\n", m);
 #endif
 
     return 0;
