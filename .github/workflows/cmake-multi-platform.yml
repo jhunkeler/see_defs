@@ -38,6 +38,7 @@ jobs:
       run: |
         #${{ matrix.c_compiler }} -v -std=gnu99 -Wall -Wextra -o see_defs main.c
         export CC=${{ matrix.c_compiler }}
+        export SDKROOT=$(xcrun --show-sdk-path)
         mkdir build
         cd build
         cmake ..
