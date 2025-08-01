@@ -14,6 +14,10 @@ int main(int argc, char *argv[]) {
     printf("__DARWIN_C_LEVEL = %luL\n", __DARWIN_C_LEVEL);
 #endif
 
+#ifdef snprintf
+    printf("HAVE_SNPRINTF\n")
+#endif
+
     return 0;
 }
 
