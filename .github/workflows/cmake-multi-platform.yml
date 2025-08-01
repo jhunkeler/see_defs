@@ -36,7 +36,11 @@ jobs:
 
     - name: Build
       run: |
-        ${{ matrix.c_compiler }} -v -std=gnu99 -Wall -Wextra -o see_defs main.c
+        #${{ matrix.c_compiler }} -v -std=gnu99 -Wall -Wextra -o see_defs main.c
+        mkdir build
+        cd build
+        cmake ..
+        make
 
     - name: Test
-      run: ./see_defs
+      run: ./build/see_defs
