@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 #endif
 
 #ifdef snprintf
-    printf("HAVE_SNPRINTF\n")
+    printf("HAVE_SNPRINTF\n");
 #endif
 
     return 0;
